@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import tests.registrationform.pages.RegistrationFormPage;
 
 public class RegistrationFormTests extends RegFormBaseClass {
-    @DisplayName("Успешное заполнение регистрационной формы")
+    @DisplayName("Успешное заполнение  регистрационной формы")
     @Tag("owner")
     @Test
     public void successRegistration() {
