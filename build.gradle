@@ -9,6 +9,7 @@ repositories {
 
 def allureVersion = "2.18.1",
     selenideVersion = "6.6.3",
+    ownerVersion = "1.0.12",
     junitVersion = "5.8.2",
     slf4jVersion = "1.7.36",
     javafakerVersion = "1.0.2"
@@ -30,6 +31,7 @@ allure {
 dependencies {
     testImplementation("com.codeborne:selenide:$selenideVersion",
         "io.qameta.allure:allure-selenide:$allureVersion",
+        "org.aeonbits.owner:owner:$ownerVersion",
         "org.junit.jupiter:junit-jupiter:$junitVersion",
         "com.github.javafaker:javafaker:$javafakerVersion",
         "org.slf4j:slf4j-simple:$slf4jVersion")
@@ -53,12 +55,12 @@ tasks.withType(Test) {
 
 task propertyes_test5(type: Test) {
     useJUnitPlatform {
-        includeTags "Test5"
+        includeTags "Test5", "hello"
     }
 }
 
-task hello_test(type: Test) {
+task owner_tests(type: Test) {
     useJUnitPlatform {
-        includeTags "hello"
+        includeTags "owner"
     }
 }
